@@ -11,7 +11,7 @@ CREATE TABLE `computer_parts` (
   `computer_part_brand` varchar(45) DEFAULT NULL,
   `computer_part_price` decimal(5, 2) DEFAULT NULL,
   `computer_part_quantity` int(11) DEFAULT NULL,
- PRIMARY KEY ('computer_part_id')
+  PRIMARY KEY (`computer_part_id`)
 );
 
 INSERT INTO `computer_parts` VALUES
