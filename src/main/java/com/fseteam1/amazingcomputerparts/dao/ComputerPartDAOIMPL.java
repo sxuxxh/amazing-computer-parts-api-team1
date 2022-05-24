@@ -29,7 +29,7 @@ public class ComputerPartDAOIMPL implements IComputerPartDAO{
     @Transactional //Defines the scope of a single database transaction.
     public List<ComputerPart> findAll() {
         Session currentSession = entityManager.unwrap(Session.class);
-        Query<ComputerPart> myQuery = currentSession.createQuery("from computer_parts");
+        Query<ComputerPart> myQuery = currentSession.createQuery("from ComputerPart");
         return myQuery.getResultList();
     }
 
