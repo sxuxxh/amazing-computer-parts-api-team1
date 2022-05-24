@@ -5,6 +5,8 @@
  */
 package com.fseteam1.amazingcomputerparts.service;
 
+import com.fseteam1.amazingcomputerparts.entity.ComputerPart;
+
 import java.util.List;
 
 public interface IComputerPartService {

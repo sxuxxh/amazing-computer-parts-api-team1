@@ -1,5 +1,6 @@
 package com.fseteam1.amazingcomputerparts.dao;
 
+import com.fseteam1.amazingcomputerparts.entity.ComputerPart;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
