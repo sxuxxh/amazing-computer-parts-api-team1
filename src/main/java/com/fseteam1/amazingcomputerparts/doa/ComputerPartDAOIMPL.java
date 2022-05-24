@@ -1,4 +1,4 @@
-package doa;
+package com.fseteam1.amazingcomputerparts.doa;
 
 import org.hibernate.Session;
 import org.hibernate.query.Query;
