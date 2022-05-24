@@ -1,4 +1,4 @@
-package com.fseteam1.amazingcomputerparts.doa;
+package com.fseteam1.amazingcomputerparts.dao;
 
 import java.util.List;
 
