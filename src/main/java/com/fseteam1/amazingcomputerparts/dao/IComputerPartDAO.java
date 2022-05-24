@@ -1,5 +1,7 @@
 package com.fseteam1.amazingcomputerparts.dao;
 
+import com.fseteam1.amazingcomputerparts.entity.ComputerPart;
+
 import java.util.List;
 
 public interface IComputerPartDAO {

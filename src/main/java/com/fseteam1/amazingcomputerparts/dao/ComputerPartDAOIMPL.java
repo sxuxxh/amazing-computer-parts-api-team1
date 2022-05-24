@@ -37,7 +37,7 @@ public class ComputerPartDAOIMPL implements IComputerPartDAO{
     @Transactional //Defines the scope of a single database transaction.
     public ComputerPart findById(int computerPartId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        return currentSession.get(ComputerPart.class, theId);
+        return currentSession.get(ComputerPart.class, computerPartId);
     }
 
     @Override
