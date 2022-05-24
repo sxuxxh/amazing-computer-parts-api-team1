@@ -4,11 +4,13 @@ import com.fseteam1.amazingcomputerparts.entity.ComputerPart;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@Repository
 public class ComputerPartDAOIMPL implements IComputerPartDAO{
 
     //Define field for entity manager
@@ -27,13 +29,13 @@ public class ComputerPartDAOIMPL implements IComputerPartDAO{
     @Transactional //Defines the scope of a single database transaction.
     public List<ComputerPart> findAll() {
         Session currentSession = entityManager.unwrap(Session.class);
-        Query<ComputerPart> myQuery = currentSession.createQuery("from ComputerPart");
+        Query<ComputerPart> myQuery = currentSession.createQuery("from computer_parts");
         return myQuery.getResultList();
     }
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
-    public ComputerPart findById(int thePartId) {
+    public ComputerPart findById(int computerPartId) {
         Session currentSession = entityManager.unwrap(Session.class);
         return currentSession.get(ComputerPart.class, theId);
     }
@@ -47,9 +49,9 @@ public class ComputerPartDAOIMPL implements IComputerPartDAO{
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
-    public void deleteById(int thePartId) {
+    public void deleteById(int computerPartId) {
         Session currentSession = entityManager.unwrap(Session.class);
-        ComputerPart myPart = currentSession.get(ComputerPart.class, thePartId);
+        ComputerPart myPart = currentSession.get(ComputerPart.class, computerPartId);
         currentSession.delete(myPart);
     }
 }
