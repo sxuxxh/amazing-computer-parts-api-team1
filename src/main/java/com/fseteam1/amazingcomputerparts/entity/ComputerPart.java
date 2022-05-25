@@ -1,3 +1,8 @@
+/*
+  FSE Cohort - Team Project2
+  Amazing Computer Parts Inventory System -Team1
+  Class: ComputerPart - Java object entity mapping to database table
+ */
 package com.fseteam1.amazingcomputerparts.entity;
 
 import javax.persistence.*;

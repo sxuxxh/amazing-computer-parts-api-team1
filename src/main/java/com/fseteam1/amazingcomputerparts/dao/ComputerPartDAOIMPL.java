@@ -1,3 +1,8 @@
+/*
+  FSE Cohort - Team Project2
+  Amazing Computer Parts Inventory System -Team1
+  Class: ComputerPartDAOIMPL - data layer implementation
+ */
 package com.fseteam1.amazingcomputerparts.dao;
 
 import com.fseteam1.amazingcomputerparts.entity.ComputerPart;

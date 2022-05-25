@@ -1,3 +1,8 @@
+/*
+  FSE Cohort - Team Project2
+  Amazing Computer Parts Inventory System -Team1
+  Class: AmazingComputerPartsApplication - Main class
+ */
 package com.fseteam1.amazingcomputerparts;
 
 import org.springframework.boot.SpringApplication;
