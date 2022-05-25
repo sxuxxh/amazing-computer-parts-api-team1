@@ -29,8 +29,11 @@ public class ComputerPartController {
     }
 
     //read a computer part request
-    //http://localhost:8080/retrieveAComputerPart
-    @GetMapping("retrieveAComputerPart")
+    //http://localhost:8080/retrieveAComputerPart/1
+    @GetMapping("retrieveAComputerPart/{computerPartId}")
+    public ComputerPart findById(@PathVariable int computerPartId){
+        return computerPartService.findById(computerPartId);
+    }
 
     //This is a POST request to add a computer part
     //http://localhost:8080/addAComputerPart
