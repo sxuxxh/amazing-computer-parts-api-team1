@@ -59,7 +59,7 @@ public class ComputerPartController {
     }
 
     //This is a DELETE request to delete a computer part
-    //http://localhost:8080/amazingcomputerparts/api/v1/deleteAComputerPart
+    //http://localhost:8080/amazingcomputerparts/api/v1/deleteAComputerPart/1
     @DeleteMapping("/deleteAComputerPart/{computerPartId}")
     public String deleteAComputerPart(@PathVariable int computerPartId) {
         computerPartService.deleteById(computerPartId);
