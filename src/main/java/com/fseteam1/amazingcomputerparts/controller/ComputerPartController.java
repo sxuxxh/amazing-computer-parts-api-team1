@@ -1,3 +1,8 @@
+/*
+  FSE Cohort - Team Project2
+  Amazing Computer Parts Inventory System -Team1
+  Class: ComputerPartController - controller for HTTP end points
+ */
 package com.fseteam1.amazingcomputerparts.controller;
 
 
@@ -11,6 +16,7 @@ import java.util.List;
 
 @CrossOrigin(origins = {"http://localhost:3000"})
 @RestController
+@RequestMapping("/amazingcomputerparts/api/v1")
 public class ComputerPartController {
 
     private final IComputerPartService computerPartService;
@@ -22,21 +28,21 @@ public class ComputerPartController {
     }
 
     //Get read all request
-    //http://localhost:8080/retrieveAllComputerParts
+    //http://localhost:8080/amazingcomputerparts/api/v1/retrieveAllComputerParts
     @GetMapping("retrieveAllComputerParts")
     public List<ComputerPart> findAll() {
         return computerPartService.findAll();
     }
 
     //read a computer part request
-    //http://localhost:8080/retrieveAComputerPart/1
+    //http://localhost:8080/amazingcomputerparts/api/v1/retrieveAComputerPart/1
     @GetMapping("retrieveAComputerPart/{computerPartId}")
     public ComputerPart findById(@PathVariable int computerPartId){
         return computerPartService.findById(computerPartId);
     }
 
     //This is a POST request to add a computer part
-    //http://localhost:8080/addAComputerPart
+    //http://localhost:8080/amazingcomputerparts/api/v1/addAComputerPart
     @PostMapping("/addAComputerPart")
     public ComputerPart addAComputerPart(@RequestBody ComputerPart theComputerPart) {
         theComputerPart.setComputerPartId(0);
@@ -45,7 +51,7 @@ public class ComputerPartController {
     }
 
     //This is a PUT request to update a existing computer part
-    //http://localhost:8080/updateAComputerPart
+    //http://localhost:8080/amazingcomputerparts/api/v1/updateAComputerPart
     @PutMapping("/updateAComputerPart")
     public ComputerPart updateAComputerPart(@RequestBody ComputerPart updateAComputerPart){
         computerPartService.saveOrUpdate(updateAComputerPart);
@@ -53,7 +59,7 @@ public class ComputerPartController {
     }
 
     //This is a DELETE request to delete a computer part
-    //http://localhost:8080/deleteAComputerPart
+    //http://localhost:8080/amazingcomputerparts/api/v1/deleteAComputerPart
     @DeleteMapping("/deleteAComputerPart/{computerPartId}")
     public String deleteAComputerPart(@PathVariable int computerPartId) {
         computerPartService.deleteById(computerPartId);

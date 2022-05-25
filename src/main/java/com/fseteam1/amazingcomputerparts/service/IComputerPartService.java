@@ -1,6 +1,6 @@
 /*
   FSE Cohort - Team Project2
-  Amazing Computer Parts Inventory System -Team2
+  Amazing Computer Parts Inventory System -Team1
   Class: IComputerPartService - service interface
  */
 package com.fseteam1.amazingcomputerparts.service;
